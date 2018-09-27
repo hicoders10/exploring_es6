@@ -1,7 +1,7 @@
 const axios = require('axios');
 
-const getString = async () => {
-    return 'hola';
+const getApiUrl = async () => {
+    return 'https://jsonplaceholder.typicode.com';
 }
 
-console.log(getString());
+console.log(getApiUrl());
