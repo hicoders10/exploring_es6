@@ -36,7 +36,7 @@ console.log('Mapped dates', mappedDates);
 
  console.log('Full response object', fullResponseObject);
 
- // Useful for copying
+ // Useful for cloning
 
  const cloneObj = {...statusObject};
 
