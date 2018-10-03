@@ -1,3 +1,6 @@
+/**
+ * Arrays
+ */
 const dates = [
     {
         year: '2016',
@@ -15,4 +18,28 @@ const mappedDates = dates.map(({year, monthIndex, detail}) => new Date(year, mon
 
 // Date reference --> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
-console.log(mappedDates);
+console.log('Mapped dates', mappedDates);
+
+/**
+ * Objects
+ */
+
+ const statusObject = {
+     code: 200,
+     statusText: 'succeed'
+ };
+
+ const fullResponseObject = {
+     data: [0,1,2,3],
+     ...statusObject
+ };
+
+ console.log('Full response object', fullResponseObject);
+
+ // Useful for copying
+
+ const cloneObj = {...statusObject};
+
+ statusObject.code = 400;
+
+ console.log('Status object and clone object', statusObject, cloneObj);
