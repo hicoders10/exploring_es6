@@ -1,3 +1,23 @@
+'use strict';
+
+/**
+ * THIS
+ * this es el objeto desde el que se llama la función
+ */
+
+ const person = {
+     name: 'Albert',
+     run: function() {
+         console.log(this);
+     }
+ }
+
+ //person.run();
+
+ //const run = person.run;
+ //run();
+
+
 /**
  * Context
  */
@@ -7,7 +27,7 @@ class LogService {
         this.prefix = prefix;
     }
     log(messages) {
-        messages.forEach(function (message) {
+        messages.forEach((message) => {
             console.log(this.prefix + ' ' + message);
         });
     }
@@ -15,7 +35,7 @@ class LogService {
 
 const logServiceInstance = new LogService('Auth Logs');
 
-// logServiceInstance.log(['Service up', 'Service down']);
+//logServiceInstance.log(['Service up', 'Service down']);
 
 /**
  * Implicit return and body

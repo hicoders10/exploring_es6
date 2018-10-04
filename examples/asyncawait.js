@@ -15,15 +15,21 @@ console.log(getApiUrl());
  * Tradicionalmente para encadenar promesas
  */
 
-/* getApiUrl().then(url => {
+/*getApiUrl().then(url => {
     getUsers(url).then(response => {
         getTodos(url, response.data[0].id).then(todosResponse => {
             console.log('todos of first user', todosResponse.data);
         })
-    });
+    })
 })*/
 
 /**
  * Async / await
  */
 
+ /*(async () => {
+    const url = await getApiUrl();
+    const usersResponse = await getUsers(url);
+    const todos = await getTodos(url, usersResponse.data[0].id);
+    console.log(todos.data);
+ })();*/

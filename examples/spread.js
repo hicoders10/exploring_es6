@@ -5,7 +5,7 @@ const dates = [
     {
         year: '2016',
         monthIndex: 2,
-        detail: [23,11,50,10,800]
+        detail: [23,11,50,10,800] // day, hours, minutes, seconds, miliseconds
     },
     {
         year: '2017',
@@ -14,7 +14,7 @@ const dates = [
     }
 ];
 
-const mappedDates = dates.map(({year, monthIndex, detail}) => new Date(year, monthIndex, ...detail));
+const mappedDates = dates.map(({year, monthIndex, detail}) => new Date(year, monthIndex, detail[0], detail[1], detail[2], detail[3], detail[4]));
 
 // Date reference --> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
